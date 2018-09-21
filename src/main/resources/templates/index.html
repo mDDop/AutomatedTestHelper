@@ -9,21 +9,37 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>QA Simple Tools [HG]!</title>
+    <style>
+        body{ white-space:pre-wrap;}
+    </style>
+
 </head>
 <body>
-<form method="post" th:action="${'/'}">
-    <div class="form-group">
-        <label for="exampleFormControlTextarea1">Example textarea</label>
-        <textarea th:name="dataInput" class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
-    </div>
-    <span>
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link active" href="/">Active</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+</ul>
+<div style="padding-left: 100px; padding-right: 100px">
+    <form method="post" th:action="${'/'}" style="padding: 0px; margin: 0px">
+            <!---label for="exampleFormControlTextarea1"></label-->
+            <textarea th:name="dataInput" placeholder="Paste here content of application-test.yml:" class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+        <span>
         <button type="submit" class="btn btn-primary mb-2">Create java variables</button>
     </span>
-</form>
+    </form>
 
-    <p th:text="${}">
-
-    </p>
+    <p th:text="${dataOutput}"></p>
+</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
