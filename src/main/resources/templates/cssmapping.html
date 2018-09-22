@@ -33,7 +33,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav" style="alignment: center">
-            <a class="nav-item nav-link active" style="position: relative; align-items: center" href="/">
+            <a class="nav-item nav-link" style="position: relative; align-items: center" href="/">
                 <div style="align-items: center">
                     <i class="material-icons" style="display: table; margin: 0 auto">
                         home
@@ -43,7 +43,7 @@
                 Home
                 </span>
                 <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="/cssmapping">
+            <a class="nav-item nav-link active" href="/cssmapping">
                 <div style="align-items: center">
                     <i class="material-icons" style="display: table; margin: 0 auto">
                         compare_arrows
@@ -72,13 +72,26 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
 </nav>
-<br/>
 
 <div style="padding: 30px">
-<p>
-    Welcome on QA Helper page.
-</p>
+    <form method="post" th:action="${'/cssmapping'}" style="padding: 0px; margin: 0px">
+            <!---label for="exampleFormControlTextarea1"></label-->
+            <textarea th:name="dataInput" placeholder="Paste here content of application-test.yml:" class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+        <div style="position: relative">
+
+        <span>
+                <div style="padding: 15px">
+
+                </div>
+                <button type="submit" class="btn btn-success" style="position: absolute; right: 0px">Create java variables</button>
+            </span>
+        </div>
+
+    </form>
+
+    <p th:text="${dataOutput}"></p>
 </div>
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

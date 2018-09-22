@@ -22,16 +22,26 @@ public class MainController {
         return "index";
     }
 
-    @PostMapping("/")
-    public String index(Model model,
+    @GetMapping("/cssmapping")
+    public String cssmapping(Model model){
+        return "cssmapping";
+    }
+
+    @GetMapping("/contact")
+    public String contact(Model model){
+        return "contact";
+    }
+
+
+    @PostMapping("/cssmapping")
+    public String cssmappingPost(Model model,
                         @RequestParam("dataInput") String dataInput){
 
-        String dataOutput = "kk";
+        //String dataOutput = "kk";
         System.out.println(dataInput);
 
         model.addAttribute("dataOutput", vCreator.getVariables(dataInput));
 
-        return "index";
+        return "cssmapping";
     }
-
 }
