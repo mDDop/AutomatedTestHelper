@@ -43,7 +43,7 @@
                 Home
                 </span>
                 <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link active" href="/cssmapping">
+            <a class="nav-item nav-link" href="/cssmapping">
                 <div style="align-items: center">
                     <i class="material-icons" style="display: table; margin: 0 auto">
                         compare_arrows
@@ -63,7 +63,7 @@
                 Useful Methods
                 </span>
             </a>
-            <a class="nav-item nav-link" href="/contact">
+            <a class="nav-item nav-link active" href="/contact">
                 <div style="align-items: center">
                     <i class="material-icons" style="display: table; margin: 0 auto">
                         email
@@ -81,24 +81,9 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
 </nav>
+<br/>
+<div style="padding-left: 100px; padding-right: 100px">
 
-<div style="padding: 30px">
-    <form method="post" th:action="${'/cssmapping'}" style="padding: 0px; margin: 0px">
-            <!---label for="exampleFormControlTextarea1"></label-->
-            <textarea th:name="dataInput" placeholder="Paste here content of application-test.yml:" class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
-        <div style="position: relative">
-
-        <span>
-                <div style="padding: 15px">
-
-                </div>
-                <button type="submit" class="btn btn-success" style="position: absolute; right: 0px">Create java variables</button>
-            </span>
-        </div>
-
-    </form>
-
-    <p th:text="${dataOutput}"></p>
 </div>
 
 <!-- Optional JavaScript -->
