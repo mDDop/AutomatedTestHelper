@@ -24,7 +24,7 @@ public class IndexedField {
 
     @Override
     public String toString() {
-        return "IndexedField{" +
+        return "IndexedField {" +
                 "indexNumber=" + indexNumber +
                 ", nameOfField='" + nameOfField + '\'' +
                 '}';
